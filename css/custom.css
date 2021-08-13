@@ -1,0 +1,1214 @@
+@import url("reset.css");
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav.secondary {
+    background-color: hsl(208, 24%, 40%);
+    width: 100%;
+    padding: 0 6%;
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.secondary-outer,
+.primary-outer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+
+.secondary li > a {
+    color: white;
+}
+
+.secondary li > a:hover {
+    text-decoration: underline;
+}
+
+.secondary li > a:hover {
+    text-decoration: underline;
+}
+
+.sec-call,
+.copyright {
+    color: white;
+    padding: 10px;
+
+}
+
+.secondary-inner {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.secondary-inner > li {
+    padding: 0 12px;
+    border-left: 1px solid hsla(208, 24%, 72%, 0.3);
+}
+
+.secondary-inner > li:last-child {
+    padding-right: 4px;
+}
+
+.secondary-inner > li:first-child {
+    border-left: none;
+}
+
+
+nav.primary {
+
+    width: 100%;
+    height: 80px;
+    padding: 0 40px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.nav-logo {
+    margin-right: auto;
+}
+
+.nav-logo img {
+    width: 140px;
+    vertical-align: middle;
+}
+
+.primary-inner {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+
+
+.primary-outer li > a {
+    display: inline-block;
+    color: hsl(208, 4%, 72%);
+    padding: 0 10px;
+    height: 30px;
+}
+
+
+
+.primary-inner > li:first-of-type > a {
+    color: hsl(208, 4%, 42%);
+}
+
+
+.primary-outer > li:last-of-type > a {
+
+    color: hsl(208, 4%, 22%);
+}
+
+
+
+.primary-inner li > a:hover {
+    color: hsl(208, 4%, 42%);
+}
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+#slider-1 {
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    animation: changeBackGround infinite 16s ease-in-out;
+}
+
+@keyframes changeBackGround {
+    from, 24% {
+        background: url("../images/tender-couple-bg-1500x1000.jpg") left/cover no-repeat fixed;
+    }
+    25%, 49% {
+        background: url("../images/winter-girl-small-1500x942.jpg") right/cover no-repeat fixed;
+    }
+    50%, 74%{
+        background: url("../images/girls-shopping-desat-1500x1000.jpg") right top/cover no-repeat fixed;
+    }
+    75%,100% {
+        background: url("../images/fashion-girl-large-1500x698.jpg") left/cover no-repeat fixed;
+    }
+}
+
+#slider-1 > * {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.slider-foreground {
+    max-width: 30%;
+    height: 100%;
+    position: absolute;
+    left: 1rem;
+    z-index: 1;
+    text-align: left;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    line-height: 1.3;
+}
+
+.slider-foreground h2 {
+    color: hsl(208, 4%, 26%);
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.slider-foreground p {
+    color: hsl(208, 4%, 40%);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.btn-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.slider-foreground .btn {
+    display: inline-block;
+    text-align: center;
+    border-radius: 4px;
+    text-transform: uppercase;
+    transition: opacity 500ms 50ms;
+}
+
+.slider-foreground .women {
+    font-weight: bold;
+    color: hsl(208, 4%, 90%);
+    background-color: hsl(208, 40%, 63%);
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.slider-foreground .men {
+    color: hsl(208, 4%, 55%);
+    border: solid 3px hsl(208, 4%, 45%);
+}
+
+.women:hover,
+.men:hover {
+    opacity: 0.8;
+}
+
+
+.slider li > a {
+    display: none;
+    position: absolute;
+    top: 213px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 3px;
+    background-color: hsla(208, 4%, 42%, 0.5);
+    color: hsla(208, 4%, 92%, 0.7);
+    z-index: 2;
+}
+
+.slider li > a:first-of-type {
+    left: 0;
+}
+
+.slider li > a:last-of-type {
+    right: 0;
+}
+
+.slider li:hover > a {
+    display: inline-block;
+}
+
+
+.collections-item > a {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+
+.collections-item img {
+    width: 100%;
+    height: 100%;
+    transition: transform 800ms 100ms;
+}
+
+.collections-item:hover img {
+    transform: scale(1.1, 1.1);
+}
+
+.collections-item h4 {
+    position: absolute;
+    text-transform: uppercase;
+    color: hsl(208, 4%, 92%);
+    z-index: 2;
+    font-size: 1.3rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.collections-item > a::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(208, 23%, 56%, 0.7);
+    transition: background-color 500ms 100ms;
+}
+
+.collections-item:hover > a::after {
+    background-color: transparent;
+}
+
+.item-title > .item-description {
+    line-height: 1.5;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.top-sellers h2,
+.blue-lady-1st h3 {
+    font-size: 2rem;
+    font-weight: 400;
+    color: hsl(208, 3%, 26%);
+    text-align: center;
+    margin: 30px auto;
+}
+
+.top-sellers-item > ul {
+    list-style-type: none;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.top-sellers-item ul > li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: 500ms 50ms opacity;
+    opacity: 0;
+    animation: t-s-item-opacity 10s infinite linear;
+}
+
+
+.top-sellers-item ul > li:last-child {
+    animation-delay: 5s;
+}
+
+.top-sellers-items:hover ul > li {
+    animation-play-state: paused;
+}
+
+.top-sellers-items:hover ul > li:last-child {
+    animation-play-state: paused;
+}
+
+@keyframes t-s-item-opacity {
+
+    3%,
+    47% {
+        opacity: 1;
+    }
+
+    from,
+    50%,
+    to {
+        opacity: 0;
+    }
+}
+
+.top-sellers-item li > a,
+.blue-lady-1st-item > a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.item-img img {
+    width: 100%;
+    margin-bottom: 13px;
+}
+
+.top-sellers-item img + img,
+.blue-lady-1st-item img + img {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+.top-sellers-item:hover img + img,
+.blue-lady-1st-item:hover img + img {
+    opacity: 1;
+}
+
+
+.top-sellers-item .item-title,
+.blue-lady-1st-item .item-title {
+    color: hsl(0, 0%, 23%);
+    width: 100%;
+    font-weight: 400;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+    text-transform: uppercase;
+}
+
+.blue-lady-1st-item .item-title {
+    font-size: 0.9rem;
+    text-transform: capitalize;
+}
+
+
+
+.top-sellers-item .item-title > .sale,
+.blue-lady-1st-item .item-title > .sale {
+    background-color: hsl(208, 24%, 52%);
+    padding: 13px 6px;
+    border-radius: 50%;
+    text-transform: capitalize;
+    font-size: .8rem;
+    color: white;
+}
+
+.top-sellers-item .item-price,
+.blue-lady-1st-item .item-price {
+    color: hsl(207, 24%, 50%);
+    font-weight: 600;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.item-price del {
+    color: hsl(0, 0%, 53%);
+}
+
+.item-price .price-dot {
+    font-size: 0.4rem;
+    color: hsl(207, 24%, 50%);
+    padding: 0 10px;
+    height: 1.1rem;
+    line-height: 1.1rem;
+}
+
+.blue-lady {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+
+}
+
+.blue-lady-1st {
+    background-color: hsl(0, 0%, 99%);
+}
+
+.blue-lady-1st h3 {
+    text-align: left;
+    color: hsl(0, 0%, 36%);
+
+}
+
+.blue-lady-1st p {
+    width: 100%;
+    text-align: left;
+    color: hsl(0, 0%, 50%);
+    font-size: 0.9rem;
+    font-weight: 200;
+    line-height: 1.5;
+}
+
+.blue-lady-1st-items {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.blue-lady-1st-item {
+    padding: 0.5vw;
+    position: relative;
+}
+
+.blue-lady-2nd {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.blue-lady-2nd img {
+    width: 100%;
+    position: relative;
+    z-index: -2;
+}
+
+.blue-No {
+    color: white;
+    text-align: center;
+    font-size: 0.66rem;
+    width: 1.3rem;
+    height: 1.3rem;
+    line-height: 1.2rem;
+    border-radius: 50%;
+    background-color: hsl(208, 24%, 52%);
+    position: absolute;
+}
+
+.blue-No::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0, 0%, 100%, 0.5);
+    border-radius: 50%;
+    animation: blue-No-opaci-sca infinite 2s;
+    z-index: -1;
+}
+
+
+@keyframes blue-No-opaci-sca {
+    from {
+        opacity: 1;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(3);
+    }
+}
+
+.No-4 {
+    color: hsl(208, 24%, 52%);
+    background-color: white;
+
+}
+
+.advantages {
+    width: 100%;
+    padding: 10px 5vw;
+    display: flex;
+    flex-flow: row wrap;
+    line-height: 1.5;
+}
+
+.advantages > * {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.advantages > * >div:first-child{
+    flex: 0 1 30%;
+}
+
+.advantages > * >div:last-child{
+    flex: 1 1 60%;
+}
+
+.advantages .item-title {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: hsl(208, 3%, 26%);
+    margin-top: 10px;
+}
+
+.advantages .item-description {
+    color: hsl(0, 0%, 64%);
+    width: 100%;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-top: 10px;
+}
+
+.advantages .fa,
+.advantages .fas,
+.advantages .far {
+    border: solid 1px hsl(0, 0%, 84%);
+    padding: 1.3rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    color: hsl(0, 0%, 35%);
+}
+
+.advantages .item-2 .item-icon {
+    border: none;
+    width: 1.5rem;
+}
+
+.advantages .item-2 img {
+    width: 4.5rem;
+}
+
+.subscribe {
+    width: 100%;
+    padding: 0 7%;
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.5
+}
+
+.subscribe input {
+    background-color: transparent;
+    border: white solid 2px;
+    border-radius: 3px;
+    height: 45px;
+    margin: 20px 2px 0;
+    width: 33.333%;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+
+}
+
+.subscribe input,
+input::placeholder,
+input[type="submit"] {
+    color: white;
+    font-size: .9rem;
+    padding-left: 10px;
+}
+
+.footer-branches {
+    background-color: hsl(208, 20%, 58%);
+    width: 100%;
+    padding: 100px 5% 0;
+    display: flex;
+    flex-flow: column;
+    color: white;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.footer-branches .branch-email a,
+.footer-branches .branch-tel {
+    color: white;
+    font-size: 0.9rem;
+}
+
+.footer-branches .branch-email {
+    margin-top: 12px;
+}
+
+.footer-branches h4,
+.footer-branches .branch-name {
+    color: hsl(208, 30%, 80%);
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.footer-nav {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.footer-nav a {
+    color: inherit;
+    padding: 0 3px;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+.footer-nav ul {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: 3px;
+}
+
+.footer-nav li {
+    margin: -10px 10px 5px;
+}
+
+.target-link {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: hsla(0, 0%, 0%, 0.2);
+    text-align: center;
+    line-height: 50px;
+    color: hsla(0, 0%, 100%, 0.6);
+    border-radius: 4px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+
+.target-link:hover{
+    background-color: hsla(0, 0%, 0%, 0.3);
+}
+
+/* ------------------  media-dependent styles------------ */
+
+@media screen and (max-width:800px) {
+    .primary {
+        width: 100%;
+    }
+
+    .primary-outer {
+        position: relative;
+        height: 60px;
+        line-height: 60px;
+    }
+
+    .primary-outer .primary-inner > li:not(:nth-of-type(2)) {
+        height: 30px;
+        line-height: 30px;
+    }
+
+    .primary-outer .primary-inner > li:nth-of-type(2) {
+        line-height: 30px;
+    }
+
+    .primary-outer .nav-logo {
+        order: -1;
+    }
+
+    .primary-outer > li:nth-child(3) {
+        order: -1;
+        position: relative;
+        z-index: 2;
+    }
+
+    .primary-outer > li:last-child {
+        color: hsl(208, 4%, 22%);
+    }
+
+    .primary-inner {
+        position: absolute;
+        top: 0;
+        right: -40px;
+        transform-origin: 100% center;
+        transform: scaleX(0);
+        background-color: white;
+        width: 250px;
+        height: 100vh;
+        overflow-y: scroll;
+        -ms-overflow-y: scroll;
+        padding: 80px 0 0 30px;
+        z-index: 1;
+        transition:  300ms  transform;
+    }
+
+    .primary-outer li > a,
+    .primary-inner li:first-of-type > a {
+        display: block;
+        color: hsl(208, 4%, 12%);
+        font-weight: 400;
+    }
+
+    .shop > li {
+        padding-left: 20px;
+    }
+
+    .shop > li > ul > li {
+        padding-left: 20px;
+    }
+
+    .primary-inner li {
+        border-top: 1px hsl(208, 4%, 92%) solid;
+        transition: 400ms 50ms background-color;
+    }
+
+    .primary-inner a:hover {
+        background-color: hsl(208, 4%, 90%);
+    }
+
+    .shop > li {
+        color: hsl(208, 4%, 22%);
+        font-weight: normal;
+    }
+
+    .shop > li > ul {
+        flex-flow: column nowrap;
+    }
+
+
+    .shop > li > a {
+        color: hsl(208, 4%, 22%);
+        font-weight: normal;
+    }
+
+    .primary-inner .shop li {
+        text-align-last: left;
+        color: hsl(208, 4%, 22%);
+        font-weight: 300;
+
+    }
+
+    .menu {
+        width: 20px;
+        z-index: 2;
+    }
+
+    .menu-button,
+    .menu .fa-bars,
+    .menu .fa-times {
+        position: absolute;
+        top: 50%;
+        right: 35px;
+        transform: translateY(-50%);
+    }
+
+    .menu-button {
+        width: 20px;
+        height: 20px;
+        transform: translate(14%, -60%);
+        opacity: 0;
+        z-index: 3;
+        cursor: pointer;
+    }
+
+    .menu-button:checked ~ .primary-inner {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        transform: scaleX(1);
+    }
+
+    .menu-button:checked ~ .fa-bars {
+        opacity: 0;
+    }
+
+    .menu .fa-bars,
+    .menu .fa-times {
+        font-size: 20px;
+        color: hsl(208, 4%, 52%);
+        z-index: 2;
+    }
+
+    .menu .fa-times {
+        opacity: 0;
+    }
+
+    .menu-button:checked ~ .fa-times {
+        opacity: 1;
+    }
+
+    .secondary-outer {
+        display: flex;
+        flex-flow: column-reverse nowrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .secondary-outer {
+        padding: 10px 0;
+    }
+
+    .sec-call {
+        padding: 20px 0 0;
+
+    }
+    
+    .slider-foreground {
+    max-width: 100%;
+        padding: 30px;
+}
+
+ .slider-foreground h2 {
+        font-size: 1.3rem;
+     background-color: hsla(0,100%, 100%, 0.3);
+ }
+
+    .slider-foreground p {
+        font-size: 1rem;
+        background-color: hsla(0,100%, 100%, 0.5);
+    }
+
+    .slider-foreground .btn {
+        font-size: 0.7rem;
+    }
+
+    .slider-foreground .women {
+        padding: 10px 18px;
+margin-right: 10px;
+    }
+
+    .slider-foreground .men {
+        padding: 7px 20px;
+        background-color: hsla(0,100%, 100%, 0.8);
+    }
+
+    .collections {
+        width: 100%;
+        padding: 0 80px;
+    }
+
+    .collections-item {
+        width: 100%;
+        height: 100%;
+        margin-bottom: -5px;
+    }
+
+    .top-sellers {
+        width: 100%;
+        margin-bottom: 80px;
+    }
+
+    .top-sellers-items {
+        width: 100%;
+        height: 115vw;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .top-sellers-item {
+        width: 50%;
+        height: 50%;
+        text-align: center;
+    }
+
+    .top-sellers-item ul > li {
+        padding: 1vw 2vw;
+    }
+
+}
+
+.top-sellers-item .item-img {
+    width: 42vw;
+    height: 42vw;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.blue-lady-1st {
+    padding: 5vw;
+    width: 100%;
+}
+
+.blue-lady-1st-item {
+    width: 50%;
+}
+
+.blue-lady-1st-item .item-img {
+    width: 100%;
+}
+
+.blue-lady-2nd {
+    width: 100%;
+}
+
+.No-1 {
+    top: 8.3vw;
+    left: 54.5vw;
+}
+
+.No-2 {
+    top: 27vw;
+    left: 52.5vw;
+}
+
+.No-3 {
+    top: 54vw;
+    left: 57vw;
+}
+
+.No-4 {
+    top: 104vw;
+    left: 52vw;
+}
+
+.advantages > * {
+    width: 100%;
+    padding-top: 50px;
+}
+
+.advantages > div div:nth-child(2) {
+    width: 85%;
+}
+
+footer {
+    width: 100%;
+}
+
+.subscribe {
+    background: linear-gradient(to top, hsla(208, 20%, 78%, 0.84) 0%, hsla(208, 20%, 78%, 0.84) 100%), url("../images/hipster-girls-working.jpg") no-repeat;
+    background-size: 140% auto;
+    background-position: -160px -5px;
+    height: 265px;
+    width: 100%;
+}
+
+.footer-branches {
+    flex-flow: column nowrap;
+}
+
+.footer-branches > * {
+    margin-bottom: 100px;
+}
+
+/*----------------------------------------------------------*/
+
+@media screen and (min-width:801px) and (max-width:1600px) {
+
+    .sec-call,
+    .copyright {
+        margin-right: auto;
+    }
+
+    .menu .menu-button,
+    .menu .fa-bars,
+    .menu .fa-times {
+        display: none;
+    }
+
+    .primary-outer {
+        position: relative;
+    }
+
+    .primary-outer > li {
+        height: 80px;
+        line-height: 80px;
+    }
+
+    .shop {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 3;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        transition: 200ms 50ms transform;
+        transform-origin: center 0;
+        transform: scaleY(0);
+        height: 200px;
+        background-color: white;
+    }
+
+    .shop > li > a {
+        color: hsl(208, 4%, 22%);
+        font-weight: normal;
+    }
+
+    .primary-inner .shop li {
+        height: 30px;
+        line-height: 30px;
+        text-align-last: left;
+        color: hsl(208, 4%, 22%);
+        font-weight: 300;
+    }
+
+    .primary-inner > li:nth-child(2):hover .shop {
+        transform: scaleY(1);
+    }
+
+    .primary-outer > li:last-child {
+        border-left: 1px hsl(208, 4%, 89%) solid;
+        border-right: 1px hsl(208, 4%, 89%) solid;
+        color: hsl(208, 4%, 22%);
+        margin-left: 15px;
+    }
+
+    .primary-outer > li:last-of-type > a {
+        padding: 0 35px;
+    }
+
+    .slider-foreground {
+        max-width: 30%;
+    }
+
+    .slider-foreground h2 {
+        font-size: 2.5rem;
+    }
+
+    .slider-foreground p {
+        font-size: 1.5rem;
+    }
+
+    .slider-foreground .btn {
+        font-size: 0.8rem;
+    }
+
+    .slider-foreground .women {
+        padding: 15px 35px;
+    }
+
+    .slider-foreground .men {
+        padding: 12px 35px;
+    }
+
+    .slider-foreground {
+        right: 40px;
+    }
+
+    .collections {
+        width: 100%;
+        height: 25vw;
+    }
+
+    .collections-item {
+        float: left;
+        width: 25%;
+        height: 100%;
+    }
+
+    .top-sellers {
+        width: 100%;
+        margin-bottom: 100px;
+    }
+
+    .top-sellers-items {
+        width: 100%;
+        padding: 0 5vw;
+        height: 26vw;
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    .top-sellers-item {
+        width: 25%;
+        height: 100%;
+        text-align: center;
+    }
+
+    .top-sellers-item ul > li {
+
+        padding: 1vw;
+    }
+
+    .top-sellers-item .item-img {
+        width: 22vw;
+        height: 22vw;
+        margin-bottom: 15px;
+        position: relative;
+    }
+
+
+    .blue-lady-1st {
+        padding: 5vw;
+        width: 50%;
+    }
+
+    .blue-lady-1st-item {
+        width: 33.3333%;
+    }
+
+    .blue-lady-1st-item .item-img {
+        width: 100%;
+    }
+
+    .blue-lady-2nd {
+        width: 50%;
+    }
+
+
+    .No-1 {
+        top: 3.4vw;
+        left: 27.3vw;
+    }
+
+    .No-2 {
+        top: 13vw;
+        left: 25vw;
+    }
+
+    .No-3 {
+        top: 27.5vw;
+        left: 27vw;
+    }
+
+    .No-4 {
+
+        top: 53vw;
+        left: 26vw;
+    }
+
+    .advantages > * {
+        width: 50%;
+        padding-top: 50px;
+    }
+
+    .subscribe {
+        background: linear-gradient(to top, hsla(208, 24%, 52%, 0.6) 0%, hsla(208, 24%, 52%, 0.6) 100%), url("../images/hipster-girls-working.jpg") no-repeat;
+        background-size: 110vw auto;
+        background-position: -70px -35px;
+        height: 225px;
+
+    }
+
+    form {
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    .footer-branches {
+        flex-flow: row nowrap;
+        color: white;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .footer-branches > * {
+        margin: 0 1% 100px;
+        width: 25%;
+    }
+}
+
+    /* -------------  media dependant styles  END ---------- */
